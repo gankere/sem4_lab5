@@ -1,5 +1,0 @@
-C:/Users/gankere/TPU_Workspace/painter_lab/build/CMakeFiles/painter_lab.dir
-C:/Users/gankere/TPU_Workspace/painter_lab/build/CMakeFiles/edit_cache.dir
-C:/Users/gankere/TPU_Workspace/painter_lab/build/CMakeFiles/rebuild_cache.dir
-C:/Users/gankere/TPU_Workspace/painter_lab/build/CMakeFiles/painter_lab_autogen_timestamp_deps.dir
-C:/Users/gankere/TPU_Workspace/painter_lab/build/CMakeFiles/painter_lab_autogen.dir
