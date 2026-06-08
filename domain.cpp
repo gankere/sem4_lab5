@@ -51,8 +51,17 @@ void Canvas::undo() {
 }
 
 void Canvas::clear() {
-    std::fill(data.begin(), data.end(), Pixel(false));
-    undoHistory = std::stack<UndoStep>(); // Очищаем историю при полной очистке
+    startBatch();
+    
+    for (int y = 0; y < h; ++y) {
+        for (int x = 0; x < w; ++x) {
+            if (data[y * w + x].filled) {
+                setPixel(x, y, Pixel(false));
+            }
+        }
+    }
+    
+    endBatch();
 }
 
 // === Tools ===
