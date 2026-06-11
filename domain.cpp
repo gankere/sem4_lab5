@@ -52,7 +52,6 @@ void Canvas::undo() {
 
 void Canvas::clear() {
     startBatch();
-    
     for (int y = 0; y < h; ++y) {
         for (int x = 0; x < w; ++x) {
             if (data[y * w + x].filled) {
@@ -60,8 +59,7 @@ void Canvas::clear() {
             }
         }
     }
-    
-    endBatch();
+    endBatch(); 
 }
 
 // === Tools ===
