@@ -19,6 +19,17 @@ QtCanvasWidget::~QtCanvasWidget() {
 }
 // Метод смены инструмента
 void QtCanvasWidget::updateFactory(IToolFactory* factory) {
+    if (factory == nullptr) {
+        // Безопасная очистка при передаче nullptr
+        delete activeTool;
+        delete currentFactory;
+        activeTool = nullptr;
+        currentFactory = nullptr;
+        return;
+    }
+    
+    if (currentFactory == factory) return;
+    
     delete activeTool;
     delete currentFactory;
     currentFactory = factory;
